@@ -8,4 +8,9 @@ from django.shortcuts import render
 
 def index(request):
     """top page"""
-    return render(request, 'home.html')
+    return render(request, 'layout/register.html')
+
+
+def register(request):
+    """top page"""
+    return render(request, 'layout/register.html')

@@ -9,4 +9,6 @@ from web.views import home, account
 urlpatterns = [
     path('', home.index),
     path('login/', account.user_login),
+    path('register/', home.register),
+
 ]
