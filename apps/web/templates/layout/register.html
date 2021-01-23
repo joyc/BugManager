@@ -2,6 +2,53 @@
 {% block title %}
 注册页面
 {% endblock %}
+{% block css %}
+    <style>
+        #regForm{
+            width: 500px;
+            margin: 40px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            padding: 30px
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
-注册表单
+<form id="regForm">
+    <h1 style="text-align:center">用户注册</h1>
+    <hr>
+  <div class="form-group">
+    <label for="login_id">登录名：</label>
+    <input type="text" class="form-control" id="login_id" placeholder="请输入登录名">
+  </div>
+  <div class="form-group">
+    <label for="username_id">用户名：</label>
+    <input type="text" class="form-control" id="username_id" placeholder="请输入用户名">
+  </div>
+  <div class="form-group">
+    <label for="password_id">密码：</label>
+    <input type="password" class="form-control" id="password_id" placeholder="请输入密码">
+  </div>
+  <div class="form-group">
+    <label for="password_re_id">确认密码：</label>
+    <input type="password" class="form-control" id="password_re_id" placeholder="请再次输入密码">
+  </div>
+  <div class="form-group">
+    <label for="email_id">Email：</label>
+    <input type="email" class="form-control" id="email_id" placeholder="请输入Email">
+  </div>
+  <div class="form-group">
+    <label for="mobile_id">手机号码：</label>
+    <input type="text" class="form-control" id="mobile_id" placeholder="请输入手机号码">
+  </div>
+  <div class="form-group">
+    <label for="code_id">验证码：</label>
+      <div class="row">
+        <div class="col-md-6"><input type="text" class="form-control" id="code_id" placeholder="请输入验证码"></div>
+        <div class="col-md-6"><input type="button" class="btn btn-success" id="btn_code" value="获取验证码"></div>
+      </div>
+
+  </div>
+  <button type="submit" class="btn btn-default">注册</button>
+</form>
 {% endblock %}
